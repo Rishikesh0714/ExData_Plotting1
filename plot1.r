@@ -3,6 +3,7 @@ setwd(
 )
 library(data.table)
 
+# Reading data
 power_consumption <-
   fread(
     "./household_power_consumption.txt",
@@ -20,7 +21,7 @@ our_data$Time <- hms(our_data$Time)
 rm(ls = "power_consumption")
 
 
-
+# plotting
 hist(
   our_data$Global_active_power,
   main = "Global Active Power",
